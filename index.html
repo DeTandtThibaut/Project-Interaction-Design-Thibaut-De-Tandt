@@ -18,34 +18,43 @@
     <section class="Coin_info">
         <div class="coin_info--box">
             <article class="container coin_info--current">
-                <h2 class="Coin_title Coin_title--currency">Ethereum</h2>
+                <h2 class="Coin_title Coin_title--currency js-title-currency">Ethereum</h2>
                 <div class="coin_info--box">
                     <h3 class="Coin_subtitle">ETH</h3>
-                    <p class="Coin_price">$4003.374</p>
+                    <p class="Coin_price js-price">$4003.374</p>
                 </div>
                 
             </article>
             <article class="Coin_other">
                 <h2 class="Coin_title">Other popular coins</h2>
                 <div class="coin_other--items">
-                    <div class="Coin_other container coin_other--item">
+                    <div class="Coin_other container coin_other--item js-BTC">
                         <p class="Coin_other--full_name">Bitcoin</p>
                         <div class="Coin_other--short_box">
                             <p class="Coin_other--short_name">BTC</p>
-                            <p><img src="./img/a5gu4-0a4uf.svg" alt="arrow-right" class="Coin_other--icon"></p>
+                            <p class="js-clicked"><img src="./img/a5gu4-0a4uf.svg" alt="arrow-right" class="Coin_other--icon"></p>
                         </div>
                     </div>
-                    <div class="Coin_other container coin_other--item">
+                    <div class="Coin_other container coin_other--item js-MATIC">
                         <p class="Coin_other--full_name">Polygon</p>
                         <div class="Coin_other--short_box">
                             <p class="Coin_other--short_name">MATIC</p>
                             <p><img src="./img/a5gu4-0a4uf.svg" alt="arrow-right" class="Coin_other--icon"></p>
                         </div>
                     </div>
-                    <div class="Coin_other container coin_other--item">
+                    <div class="Coin_other container coin_other--item js-VET">
                         <p class="Coin_other--full_name">VeChain</p>
                         <div class="Coin_other--short_box">
                             <p class="Coin_other--short_name">VET</p>
+                            <p><img src="./img/a5gu4-0a4uf.svg" alt="arrow-right" class="Coin_other--icon"></p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="Coin_other hide_container container coin_other--item js-ETH">
+                        <p class="Coin_other--full_name">Ethereum</p>
+                        <div class="Coin_other--short_box">
+                            <p class="Coin_other--short_name">ETH</p>
                             <p><img src="./img/a5gu4-0a4uf.svg" alt="arrow-right" class="Coin_other--icon"></p>
                         </div>
                         
@@ -62,42 +71,44 @@
                     <div class="range-header">
                         <h2 class="range-title">Day's Range</h2>
                         <div class="range-price--box">
-                            <span class="price">48450.00</span>
-                            <span class="price">49595.00</span>
+                            <span class="js-price_open">48450.00</span>
+                            <span class="js-price_close">49595.00</span>
                         </div>
                     </div>
                     <div class="range-bottom_bar">
-                        <div class="range-top_bar"> <!-- style="width: 5.75371%; left: 40.5852%;"-->
+                        <div class="range-top_bar js-range-top_bar-day"> 
                         </div>
                     </div>
                     <div class="arrowContainer">
-                        <div class="arrow"><!-- style="left: 46.3389%;"-->
+                        <div class="range-arrow js-range-arrow-day">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" width="12" height="8" fill="none">
                                 <path fill="currentColor" d="M10 8H2a1 1 0 0 1-.8-1.6l4-5.33a1 1 0 0 1 1.6 0l4 5.33A1 1 0 0 1 10 8z">
                                 </path>
                             </svg>
+                            <span class="js-current_price--day range-price--label">$4668</span>
                         </div>
                     </div>
                 </div>
                 <div class="range_container">
                     <div class="range-header">
-                        <h2 class="range-title">52wk Range</h2>
+                        <h2 class="range-title">Month's Range</h2>
                         <div class="range-price--box">
-                            <span class="range-price">22712.89</span>
-                            <span class="range-price">69000.00</span>
+                            <span class="js-price_open--month">22712.89</span>
+                            <span class="js-price_close--month">69000.00</span>
                         </div>
     
                     </div>
                     <div class="range-bottom_bar">
-                        <div class="range-top_bar"><!-- style="width: 2.47369%; left: 55.6032%;-->
+                        <div class="range-top_bar js-range-top_bar-month">
                         </div>
                     </div>
                     <div class="arrowContainer">
-                        <div class="arrow"> <!--style="left: 56.7495%;"-->
+                        <div class="range-arrow js-range-arrow-month"> 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" width="12" height="8" fill="none">
                                 <path fill="currentColor" d="M10 8H2a1 1 0 0 1-.8-1.6l4-5.33a1 1 0 0 1 1.6 0l4 5.33A1 1 0 0 1 10 8z">
                                 </path>
                             </svg>
+                            <span class="js-current_price--month range-price--label">$4668</span>
                         </div>
                     </div>
                 </div>

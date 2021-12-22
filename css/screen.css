@@ -427,13 +427,21 @@ input::placeholder {
 
 .range-bottom_bar{
     background-color: #a0c4ff;
-    
     border-radius: 25px;
 }
 .range-top_bar{
     background-color: #caffbf;
     padding:0.8rem;
-    width: 5.75371%; left: 40.5852%;
+    position: relative;
+    width: 1%; 
+    left: 19%;
+    
+}
+
+.range-arrow{
+    margin-top: 0.8rem;
+    position: relative;
+    left: 20%;
 }
 .range_container{
     margin-top:1.8rem;
@@ -559,6 +567,10 @@ input::placeholder {
     align-content: center;
     margin-top: 2.8rem;
     border-top: #a0c4ff solid 1px;
+}
+
+.hide_container{
+    display: none;
 }
 
 /*------------------------------------*\
