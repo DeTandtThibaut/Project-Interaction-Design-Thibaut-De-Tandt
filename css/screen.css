@@ -1,0 +1,650 @@
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+
+/* Fonts are loaded via Google fonts */
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root {
+    /* colors */
+    --container-background:white;
+
+    --test:rgb(201, 228, 252);
+    --color-light: white;
+    --color-dark: hsla(208,70%,20%,1);
+
+    --color-front: var(--color-dark);
+    --color-back: var(--color-light);
+
+    /* Global colors */
+    --global-color-alpha-light: #4F95FF;
+    --global-color-alpha: #3385FF;
+    --global-color-alpha-dark: #2E77E6;
+    --global-color-alpha-x-dark: #1B4186;
+    --global-color-alpha-transparent: #3385ffbf;
+    --global-color-alpha-x-transparent: #3385ff4d;
+
+    --global-color-neutral-xxxx-light: #F5F6FA;
+    --global-color-neutral-xxx-light: #E2E3E7;
+    --global-color-neutral-xx-light: #caccd4;
+    --global-color-neutral-x-light: #b5b6c0;
+    --global-color-neutral-light: #a0a1ad;
+    --global-color-neutral: #8b8c9a;
+    --global-color-neutral-dark: #757787;
+    --global-color-neutral-x-dark: #606274;
+    --global-color-neutral-xx-dark: #4b4c60;
+    --global-color-neutral-xxx-dark: #35374d;
+    --global-color-neutral-xxxx-dark: #20223a;
+    --global-color-error: #FF3333;
+    --global-color-error-transparent: #FF3333bf;
+    --global-color-error-x-transparent: #FF33334d;
+
+    /* global page settings */
+    --global-page-color: var(--global-color-neutral-xxxx-dark);
+    --global-page-backgroundColor: var(--global-color-neutral-xxxx-light);
+    --global-selection-backgroundColor: var(--global-color-alpha);
+
+    /* border radius */
+    --global-borderRadius: 3px;
+    --global-borderWidth: 1px;
+
+    /* transitions */
+    --global-transitionEasing-out: ease-out;
+    --global-transitionEasing-out-cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --global-transitionDuration-alpha: .1s;
+    --global-transitionDuration-beta: .2s;
+    --global-transitionDuration-gamma: .3s;
+
+    /* Baseline settings */
+    --global-baseline: 8px;         
+    --global-whitespace: calc(var(--global-baseline) * 3); /* = 24px */
+
+    --global-whitespace-xs: calc(var(--global-baseline) * .5); /* = 4px */
+    --global-whitespace-sm: calc(var(--global-baseline) * 1); /*  = 8px */
+    --global-whitespace-md: calc(var(--global-baseline) * 2); /*  = 16px */
+    --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
+    --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
+    --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
+
+    /* forms */
+    --global-label-color: var(--global-color-neutral-xx-dark);
+    --global-placeholder-color: var(--global-color-neutral-x-light);
+    --global-input-backgroundColor: White;
+    --global-input-color: var(--global-color-neutral-xxxx-dark);
+    --global-input-borderColor: var(--global-color-neutral-xxx-light);
+    --global-input-hover-borderColor: var(--global-color-neutral-xx-light);
+    --global-input-focus-borderColor: var(--global-color-alpha);    
+    --global-input-focus-boxShadowSpread: 0 0 0 3px;
+    --global-input-focus-boxShadowColor: var(--global-color-alpha-x-transparent);
+    --global-input-error-borderColor: var(--global-color-error);
+    --global-input-error-boxShadowColor: var(--global-color-error-x-transparent);
+
+}
+
+/*------------------------------------*\
+#GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+    height:100%;
+    font-size: 16px;
+    line-height: 0.8;
+    font-family: "Work Sans", Helvetica, arial, sans-serif;
+    color: var(--color-front);
+    background-color: var(--color-back);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+body{
+    height:100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* Customize the background color to match your design.
+*/
+
+::-moz-selection {
+    background: var(--color-front);
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--color-front);
+    color: white;
+    text-shadow: none;
+}
+
+/*------------------------------------*\
+#Elements
+\*------------------------------------*/
+
+/*
+Elements: Images
+---
+Default markup for images to make them responsive
+*/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 24px;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 0 24px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+    margin: 0 0 24px;
+}
+
+ul,
+ol {
+    padding-left: 24px;
+}
+
+li ul,
+li ol {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: normal;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+figcaption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: LightGrey;
+    margin: 0 0 24px;
+}
+
+a {
+    transition: all var(--transition-alpha);
+    color: var(--color-front);
+    outline-color: var(--color-front);
+    outline-width: medium;
+    outline-offset: 2px;
+}
+
+a:visited,
+a:active {
+    color: var(--color-front);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-front);
+}
+
+label,
+input {
+    display: block;
+}
+
+select {
+    width: 100%;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+
+/* --------------------------------
+    Object: box
+    ---
+    white box
+
+*/
+.container{
+    background-color: var(--container-background);      
+    box-shadow:
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.042),
+    100px 100px 80px rgba(0, 0, 0, 0.08);
+  
+    border-radius: 10px;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/*
+    Object: Hide accessible
+    ---
+    Accessibly hide any element
+*/
+
+.o-hide-accessible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+.header{
+
+    width: 96rem;
+    margin: auto;
+    padding: 0.1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.page_title{
+    font-size: 2.8rem;
+    color: #a0c4ff;
+    margin: 2rem;
+    margin-left: 18rem;
+
+
+}
+.Coin_info{
+    display: flex;
+    justify-content: center;  
+}
+
+.coin_info--box{
+    display: flex;
+    gap: 3.8rem;
+}
+
+.coin_other--items{
+    display: flex;
+    gap: 1.8rem;
+}
+.coin_other--item{
+    padding: 1.8rem;
+    padding-bottom: 0;
+    
+}
+
+.coin_info--current{
+    padding: 1.8rem;
+    padding-right: 3.8rem;
+    padding-left: 3.8rem;
+    padding-bottom: 0;
+}
+.Coin_price{
+    font-size: 1.8rem;
+}
+.Coin_subtitle{
+    color: #9bf6ff;
+}
+
+.Coin_title--currency{
+    font-size: 3.6rem;
+}
+
+.Coin_other--full_name{
+    color: hsla(208,70%,20%,1);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.Coin_other--short_name{
+    color: #9bf6ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Coin_other--icon{
+    width: 20px;
+
+}
+.Coin_other--short_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.range_section--container{
+    width: 36rem;
+    
+    padding: 1.8rem;
+    padding-right: 3.8rem;
+    padding-left: 3.8rem;
+    font-weight: bold;
+    margin-top: 8rem;
+    background-color:var(--background-color);
+    border-left: #1B4186 solid 2px;
+    border-radius: 2px;
+    outline-style: round;
+    
+}
+
+.range-bottom_bar{
+    background-color: #a0c4ff;
+    
+    border-radius: 25px;
+}
+.range-top_bar{
+    background-color: #caffbf;
+    padding:0.8rem;
+    width: 5.75371%; left: 40.5852%;
+}
+.range_container{
+    margin-top:1.8rem;
+    margin-bottom:1.8rem;
+    
+}
+
+.range-title{
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.range-price--box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    
+}
+.box--flex{
+    
+    margin: auto;
+    margin-top: 3.8rem;
+    display: flex;
+    justify-content:center;
+    gap: 3.8rem;
+
+}
+
+.options-box{
+    border-left: #1B4186 solid 2px;
+    border-radius: 2px;
+    padding: 1.8rem;
+    padding-left: 2.8rem;
+    height: 10rem;
+    margin-top: 8rem;
+    
+}
+
+.c-custom-toggle {
+    --toggle-backgroundColor: var(--global-color-neutral-xxxx-light);
+    --toggle-borderColor: var(--global-input-borderColor);
+    --toggle-focus-borderColor: var(--global-input-focus-borderColor);
+    --toggle-checked-borderColor: var(--global-color-alpha-dark);
+    --toggle-checked-backgroundColor: var(--global-color-alpha);
+    --toggle-focus-boxShadow: var(--global-input-focus-boxShadowSpread) var(--global-input-focus-boxShadowColor);
+    --toggle-transition: all var(--global-transitionDuration-alpha) var(--global-transitionEasing-out);
+    --toggle__switch-backgroundColor: White;
+    --toggle__switch-checked-backgroundColor: White;
+    --toggle__switch-transition: all var(--global-transitionDuration-alpha) var(--global-transitionEasing-out);
+    display: flex;
+    align-items: center;
+}
+
+.c-custom-toggle__fake-input {
+    display: block;
+    height: 24px;
+    width: 48px;
+    margin-right: 16px;
+    background-color: var(--toggle-backgroundColor);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+
+.c-custom-toggle__fake-input::after {
+    position: relative;
+    display: block;
+    content: '';
+    height: 22px;
+    width: 22px;
+    border-radius: 22px;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.2);
+    background-color: var(--toggle__switch-backgroundColor);
+    transition: var(--toggle__switch-transition);
+}
+
+/* focused and active state */
+
+.c-option--hidden:focus-visible + .c-custom-toggle {
+    --toggle-borderColor: var(--toggle-focus-borderColor);
+    --toggle-boxShadow: var(--toggle-focus-boxShadow);
+}
+
+/* checked state */
+
+.c-option--hidden:checked + .c-custom-toggle {
+    --toggle-backgroundColor: var(--toggle-checked-backgroundColor);
+    --toggle-borderColor: var(--toggle-checked-borderColor);
+    --toggle__switch-backgroundColor: var(--toggle__switch-checked-backgroundColor);
+}
+
+.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
+    transform: translate(24px,0);
+}
+
+/* special active state */
+
+.c-option--hidden:active + .c-custom-toggle .c-custom-toggle__fake-input::after {
+    width: 28px;
+}
+
+.c-option--hidden:active:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
+    margin-left: -6px;
+}
+
+.c-label {
+    margin-bottom: 0;
+    font-size: 14px;
+    padding-bottom: var(--global-whitespace-sm);    
+    line-height: calc(var(--global-baseline) * 2);
+    color: var(--label-color, var(--global-label-color));
+}
+
+.c-label--option {
+    padding-bottom: 0;
+}
+
+.footer{
+    padding: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2.8rem;
+    border-top: #a0c4ff solid 1px;
+}
+
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: Mute
+    Mute with opacity
+*/
+
+.u-muted {
+    opacity: var(--muted-opacity);
+}
+
+/*------------------------------------*\
+#STATES
+\*------------------------------------*/
+
+/*
+    Change the theme using CSS vars.
+*/
+
+
+/*------------------------------------*\
+#MEDIA
+\*------------------------------------*/
+
+
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+        http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+    * Don't show links that are fragment identifiers,
+    * or use the `javascript:` pseudo protocol
+    */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+    * Printing Tables:
+    * http://css-discuss.incutio.com/wiki/Printing_Tables
+    */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
