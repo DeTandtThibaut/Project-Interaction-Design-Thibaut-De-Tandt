@@ -26,6 +26,8 @@
     --global-color-alpha-x-dark: #1B4186;
     --global-color-alpha-transparent: #3385ffbf;
     --global-color-alpha-x-transparent: #3385ff4d;
+    --global-color-alpha-x-base: #a0c4ff;
+    --global-color-alpha-x-accent: #ff70a6;
 
     --global-color-neutral-xxxx-light: #F5F6FA;
     --global-color-neutral-xxx-light: #E2E3E7;
@@ -69,6 +71,10 @@
     --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
     --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
     --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
+    --global-whitespace-x-xs: 0.8rem;
+    --global-whitespace-x-sm:1.8rem; 
+    --global-whitespace-x-md:2.8rem;
+    --global-whitespace-x-lg:3.8rem;
 
     /* forms */
     --global-label-color: var(--global-color-neutral-xx-dark);
@@ -348,7 +354,7 @@ input::placeholder {
 
 .page_title{
     font-size: 2.8rem;
-    color: #f4f881;
+    color: var(--global-color-alpha-x-accent);
     margin: 2rem;
     margin-left: 18rem;
     text-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.042),
@@ -363,30 +369,44 @@ input::placeholder {
 
 .coin_info--box{
     display: flex;
-    gap: 3.8rem;
+    gap: var(--global-whitespace-x-lg);
 }
 
 .coin_other--items{
     display: flex;
-    gap: 1.8rem;
+    gap: var(--global-whitespace-x-sm);
 }
 .coin_other--item{
-    padding: 1.8rem;
+    padding: var(--global-whitespace-x-sm);
     padding-bottom: 0;
+    border:3px solid transparent;
+    transition: all 1s;
+
     
+}
+.coin_other--item--preanimation{
+    opacity: 0;
+}
+
+.coin_other--item:hover{
+    border: 3px solid var(--global-color-alpha-x-accent);
 }
 
 .coin_info--current{
-    padding: 1.8rem;
-    padding-right: 3.8rem;
-    padding-left: 3.8rem;
+    padding: var(--global-whitespace-x-sm);
+    padding-right: var(--global-whitespace-x-lg);
+    padding-left: var(--global-whitespace-x-lg);
     padding-bottom: 0;
+    transition: all 1.5s;
+}
+.coin_info--current--preanimation{
+    opacity: 0;
 }
 .Coin_price{
     font-size: 1.8rem;
 }
 .Coin_subtitle{
-    color: #ffc6ff;
+    color: var(--global-color-alpha-x-base);
 }
 
 .Coin_title--currency{
@@ -400,7 +420,7 @@ input::placeholder {
 }
 
 .Coin_other--short_name{
-    color: #ffc6ff;
+    color: var(--global-color-alpha-x-base);
     font-size: 20px;
     font-weight: bold;
 }
@@ -420,8 +440,8 @@ input::placeholder {
     width: 36rem;
     
     padding: 1.8rem;
-    padding-right: 3.8rem;
-    padding-left: 3.8rem;
+    padding-right: var(--global-whitespace-x-lg);
+    padding-left: var(--global-whitespace-x-lg);
     font-weight: bold;
     margin-top: 8rem;
     background-color:var(--background-color);
@@ -432,7 +452,7 @@ input::placeholder {
 }
 
 .range-bottom_bar{
-    background-color: #a0c4ff;
+    background-color: var(--global-color-alpha-x-base);
     border-radius: 25px;
 }
 .range-top_bar{
@@ -441,6 +461,7 @@ input::placeholder {
     position: relative;
     width: 1%; 
     left: 19%;
+    transition: 1s;
     
 }
 
@@ -448,6 +469,7 @@ input::placeholder {
     margin-top: 0.8rem;
     position: relative;
     left: 20%;
+    transition: 1s;
 }
 .range_container{
     margin-top:1.8rem;
@@ -469,10 +491,10 @@ input::placeholder {
 .box--flex{
     
     margin: auto;
-    margin-top: 3.8rem;
+    margin-top: var(--global-whitespace-x-lg);
     display: flex;
     justify-content:center;
-    gap: 3.8rem;
+    gap: var(--global-whitespace-x-lg);
 
 }
 
@@ -480,7 +502,7 @@ input::placeholder {
     border-left: #1B4186 solid 2px;
     border-radius: 2px;
     padding: 1.8rem;
-    padding-left: 2.8rem;
+    padding-left: var(--global-whitespace-x-md);
     height: 10rem;
     margin-top: 8rem;
     
@@ -511,7 +533,11 @@ input::placeholder {
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
     box-shadow: var(--toggle-boxShadow, 0);
+    border: 2px solid transparent;
+    
 }
+
+
 
 .c-custom-toggle__fake-input::after {
     position: relative;
@@ -523,6 +549,10 @@ input::placeholder {
     box-shadow: 0 1px 3px 1px rgba(0,0,0,.2);
     background-color: var(--toggle__switch-backgroundColor);
     transition: var(--toggle__switch-transition);
+    
+}
+.c-custom-toggle__fake-input:hover {
+    border: 2px solid var(--global-color-alpha-x-accent);
 }
 
 /* focused and active state */
@@ -571,8 +601,8 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 2.8rem;
-    border-top: #a0c4ff solid 1px;
+    margin-top: var(--global-whitespace-x-md);
+    border-top: var(--global-color-alpha-x-base) solid 1px;
 }
 
 .hide_container{

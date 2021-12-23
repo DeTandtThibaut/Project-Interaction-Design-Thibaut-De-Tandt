@@ -95,6 +95,7 @@ function changeBitcoinData(){
     container.addEventListener('click', function( event ) {
        
         console.log('clicking BTC');
+  
 
         container.classList.add('hide_container');
         document.querySelector('.js-MATIC').classList.remove('hide_container');
@@ -102,8 +103,12 @@ function changeBitcoinData(){
         document.querySelector('.js-ETH').classList.remove('hide_container');
 
         document.querySelector('.js-title-currency').innerHTML = "Bitcoin";
-
+        document.querySelector('.js-coin_subtitle').innerHTML = globalKey;
         globalKey = "BTC";
+
+    
+
+
         reloadFunctions();
         
     });
@@ -114,6 +119,7 @@ function changePolygonData(){
     container.addEventListener('click', function( event ) {
        
         console.log('clicking MATIC');
+  
 
         container.classList.add('hide_container');
         document.querySelector('.js-BTC').classList.remove('hide_container');
@@ -121,8 +127,11 @@ function changePolygonData(){
         document.querySelector('.js-ETH').classList.remove('hide_container');
 
         document.querySelector('.js-title-currency').innerHTML = "Polygon";
-
+        document.querySelector('.js-coin_subtitle').innerHTML = globalKey;
         globalKey = "MATIC";
+
+      
+
         reloadFunctions();
         
     });
@@ -133,13 +142,17 @@ function changeVechainData(){
        
         console.log('clicking VET');
 
+
         container.classList.add('hide_container');
         document.querySelector('.js-MATIC').classList.remove('hide_container');
         document.querySelector('.js-BTC').classList.remove('hide_container');
         document.querySelector('.js-ETH').classList.remove('hide_container');
 
         document.querySelector('.js-title-currency').innerHTML = "VeChain";
+        document.querySelector('.js-coin_subtitle').innerHTML = globalKey;
         globalKey = "VET";
+
+
         reloadFunctions();
         
     });
@@ -150,14 +163,18 @@ function changeEthereumData(){
        
         console.log('clicking ETH');
 
+
+
         container.classList.add('hide_container');
         document.querySelector('.js-MATIC').classList.remove('hide_container');
         document.querySelector('.js-VET').classList.remove('hide_container');
         document.querySelector('.js-BTC').classList.remove('hide_container');
 
         document.querySelector('.js-title-currency').innerHTML = "Ethereum";
-
+        document.querySelector('.js-coin_subtitle').innerHTML = globalKey;
         globalKey = "ETH";
+
+
         reloadFunctions();
         
     });
@@ -170,11 +187,12 @@ function showResult(queryResponse) {
 
     console.log(queryResponse.contents);
     const response = JSON.parse(queryResponse.contents);
+    
 
     console.log(response[globalKey].price);
-    price.innerHTML = "$" + response[globalKey].price;
-    day.innerHTML = "$" + response[globalKey].price;
-    month.innerHTML = "$" + response[globalKey].price;
+    price.innerHTML = "$" + parseFloat(response[globalKey].price).toFixed(3);
+    day.innerHTML = "$" +   parseFloat(response[globalKey].price).toFixed(3);
+    month.innerHTML = "$" + parseFloat(response[globalKey].price).toFixed(3);
 
 }
 
@@ -186,8 +204,8 @@ let showMinMax = queryResponse => {
     const response = JSON.parse(queryResponse.contents);
     
     console.log(response[globalKey].price);
-	min.innerHTML = "$"+ response[globalKey].history[0].min;
-    max.innerHTML = "$"+ response[globalKey].history[0].max;
+	min.innerHTML = "$"+ parseFloat(response[globalKey].history[0].min).toFixed(3);
+    max.innerHTML = "$"+ parseFloat(response[globalKey].history[0].max).toFixed(3);
 
 };
 
@@ -198,8 +216,8 @@ let showMinMaxYear = queryResponse => {
     console.log(queryResponse.contents);
     const response = JSON.parse(queryResponse.contents);
     
-	minMonth.innerHTML = "$"+ response[globalKey].history[0].min;
-    maxMonth.innerHTML = "$"+ response[globalKey].history[0].max;
+	minMonth.innerHTML = "$"+ parseFloat(response[globalKey].history[0].min).toFixed(3);
+    maxMonth.innerHTML = "$"+ parseFloat(response[globalKey].history[0].max).toFixed(3);
 
 };
 function reloadFunctions(){
@@ -232,6 +250,11 @@ function ClickDarkToggleEvent(){
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.coin_info--current').classList.remove('coin_info--current--preanimation')
+    document.querySelector('.one').classList.remove('coin_other--item--preanimation')
+    document.querySelector('.two').classList.remove('coin_other--item--preanimation')
+    document.querySelector('.three').classList.remove('coin_other--item--preanimation')
+    document.querySelector('.four').classList.remove('coin_other--item--preanimation')
 	getPrice();
     getMinMax();
     getMinMaxYear();
