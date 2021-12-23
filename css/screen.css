@@ -105,11 +105,12 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #e9e9ff;
 
 }
 body{
     height:100%;
-    background-color: #e9e9ff;
+    
 }
 
 *,
