@@ -163,9 +163,6 @@ function changeEthereumData(){
     });
 }
 
-
-
-
 function showResult(queryResponse) {
     const price = document.querySelector('.js-price');
     const day = document.querySelector('.js-current_price--day');
