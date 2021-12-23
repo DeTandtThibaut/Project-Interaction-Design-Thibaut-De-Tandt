@@ -629,6 +629,32 @@ input::placeholder {
 #MEDIA
 \*------------------------------------*/
 
+@media screen and (max-width: 1000px) {
+    /* STYLES HERE */
+    .coin_info--box{    
+        flex-direction: column ;
+    }
+
+    .page_title{
+        margin-left: 8rem;
+    }
+
+    .box--flex{
+        flex-direction: column;
+        
+    }
+    .range_section--container{
+        margin:auto;
+    }
+    .options-box{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 0;
+    }
+
+
+}
 
 
 @media print {
