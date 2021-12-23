@@ -684,6 +684,7 @@ input::placeholder {
     .coin_info--box{    
         flex-direction: column ;
         gap: var(--global-whitespace-x-xs);
+        align-items:center;
         
         
     }
@@ -714,6 +715,7 @@ input::placeholder {
     .range_section--container{
         width: 28rem;
         border-left: transparent solid 2px;
+        padding: var(--global-whitespace-x-xs)
     
         
     }
@@ -751,6 +753,7 @@ input::placeholder {
     }
 
 }
+
 
 
 
