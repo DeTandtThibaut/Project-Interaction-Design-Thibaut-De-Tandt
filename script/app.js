@@ -214,6 +214,22 @@ function reloadFunctions(){
     changeEthereumData();
 
 }
+function ClickDarkToggleEvent(){
+    var container = document.querySelector('.js-checkbox--dark');
+    container.addEventListener('click', function( event ) {
+       
+        if(container.checked){
+            document.getElementById('dark-styles').disabled  = false;
+            document.getElementById('light-styles').disabled  = true;
+        }else{
+            document.getElementById('dark-styles').disabled  = true;
+            document.getElementById('light-styles').disabled  = false;
+        }
+        
+    });
+}
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
 	getPrice();
@@ -225,4 +241,5 @@ document.addEventListener('DOMContentLoaded', function() {
     changePolygonData();
     changeVechainData();
     changeEthereumData();
+    ClickDarkToggleEvent();
 });

@@ -9,15 +9,17 @@
 \*------------------------------------*/
 
 :root {
+
+
     /* colors */
-    --container-background:white;
+    --container-background:var(--global-color-neutral-xxxx-dark);
 
     --test:rgb(201, 228, 252);
     --color-light: white;
     --color-dark: hsla(208,70%,20%,1);
 
-    --color-front: var(--color-dark);
-    --color-back: var(--color-light);
+    --color-front: var(--color-light);
+    --color-back: var(--color-dark);
 
     /* Global colors */
     --global-color-alpha-light: #4F95FF;
@@ -37,8 +39,8 @@
     --global-color-neutral-x-dark: #606274;
     --global-color-neutral-xx-dark: #4b4c60;
     --global-color-neutral-xxx-dark: #35374d;
-    --global-color-neutral-xxxx-dark: #20223a;
-    --global-color-neutral-x-base:
+    --global-color-neutral-xxxx-dark: #0e1138;
+    --global-color-neutral-x-base:;
     --global-color-error: #FF3333;
     --global-color-error-transparent: #FF3333bf;
     --global-color-error-x-transparent: #FF33334d;
@@ -71,7 +73,7 @@
     --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
 
     /* forms */
-    --global-label-color: var(--global-color-neutral-xx-dark);
+    --global-label-color: var(--color-light);
     --global-placeholder-color: var(--global-color-neutral-x-light);
     --global-input-backgroundColor: White;
     --global-input-color: var(--global-color-neutral-xxxx-dark);
@@ -82,6 +84,7 @@
     --global-input-focus-boxShadowColor: var(--global-color-alpha-x-transparent);
     --global-input-error-borderColor: var(--global-color-error);
     --global-input-error-boxShadowColor: var(--global-color-error-x-transparent);
+
 
 }
 
@@ -105,7 +108,7 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #e9e9ff;
+    background-color: #010120;
 
 }
 body{
@@ -394,7 +397,7 @@ input::placeholder {
 }
 
 .Coin_other--full_name{
-    color: hsla(208,70%,20%,1);
+    color: white;
     font-weight: bold;
     font-size: 1.6rem;
 }
@@ -407,7 +410,7 @@ input::placeholder {
 
 .Coin_other--icon{
     width: 20px;
-    
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(359deg) brightness(111%) contrast(96%);
 
 }
 .Coin_other--short_box{
@@ -425,7 +428,7 @@ input::placeholder {
     font-weight: bold;
     margin-top: 8rem;
     background-color:var(--background-color);
-    border-left: #1B4186 solid 2px;
+    border-left: white solid 2px;
     border-radius: 2px;
     outline-style: round;
     
@@ -477,7 +480,7 @@ input::placeholder {
 }
 
 .options-box{
-    border-left: #1B4186 solid 2px;
+    border-left: white solid 2px;
     border-radius: 2px;
     padding: 1.8rem;
     padding-left: 2.8rem;
