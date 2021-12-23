@@ -348,9 +348,11 @@ input::placeholder {
 
 .page_title{
     font-size: 2.8rem;
-    color: #a0c4ff;
+    color: #f4f881;
     margin: 2rem;
     margin-left: 18rem;
+    text-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.042),
+    100px 100px 80px rgba(0, 0, 0, 0.08);;
 
 
 }
@@ -384,7 +386,7 @@ input::placeholder {
     font-size: 1.8rem;
 }
 .Coin_subtitle{
-    color: #9bf6ff;
+    color: #ffc6ff;
 }
 
 .Coin_title--currency{
@@ -398,7 +400,7 @@ input::placeholder {
 }
 
 .Coin_other--short_name{
-    color: #9bf6ff;
+    color: #ffc6ff;
     font-size: 20px;
     font-weight: bold;
 }
