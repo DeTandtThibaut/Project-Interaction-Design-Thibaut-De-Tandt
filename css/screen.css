@@ -639,10 +639,87 @@ input::placeholder {
     /* STYLES HERE */
     .coin_info--box{    
         flex-direction: column ;
+        gap: var(--global-whitespace-x-sm);
     }
 
     .page_title{
         margin-left: 8rem;
+    }
+
+    .box--flex{
+        flex-direction: column;
+        
+    }
+    .range_section--container{
+        margin:auto;
+        border-left: transparent solid 2px;
+    }
+
+    .options-box{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .header{
+        width: auto;
+        
+    }
+    .Coin_title--currency{
+        font-size: 2rem;
+       
+    }
+    .Coin_subtitle{
+        font-size: 1.6rem;
+    }
+    .Coin_price{
+        font-size: 1.6rem;
+    }
+    /* STYLES HERE */
+    .coin_info--box{    
+        flex-direction: column ;
+        gap: var(--global-whitespace-x-xs);
+        
+        
+    }
+    .mobile{
+        align-items: center;
+
+    }
+    
+    .Coin_other--short_box{
+        display: flex;
+        align-items: center;
+     
+    }
+    .Coin_other--full_name{
+       
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .Coin_other{
+        margin-top: 1rem;
+    }
+  
+    .Coin_other--short_name{
+        color: var(--global-color-alpha-x-base);
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .range_section--container{
+        width: 28rem;
+        border-left: transparent solid 2px;
+    
+        
+    }
+
+    .page_title{
+        font-size: 1.8rem;
     }
 
     .box--flex{
@@ -658,7 +735,20 @@ input::placeholder {
         align-items:center;
         margin-top: 0;
     }
+    .coin_info--current{
+        padding: var(--global-whitespace-x-xs);
+        padding-right: var(--global-whitespace-x-sm);
+        padding-left: var(--global-whitespace-x-sm);
+        width: 400px;
+        
 
+    }
+
+    .Coin_title{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
 
 }
 
